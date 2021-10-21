@@ -25,9 +25,7 @@ const Articulo = ({producto, productos, changuito, setChanguito}) => {
     return (
         <Fragment>
             <div className="list-group-item">
-                
                 <h3 >{id} - {articulo} - {precio}</h3> 
-
                 {
                     productos
                     ?

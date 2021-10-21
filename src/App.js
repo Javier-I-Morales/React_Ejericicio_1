@@ -24,8 +24,10 @@ function App() {
 
   return (
     <Fragment>
+
       < Header />
-      <div className="container">
+
+      <div className="container" >
         {productos.map( producto => 
           (
             <Articulo 
@@ -44,8 +46,8 @@ function App() {
         setChanguito = {setChanguito}
       />
 
-
       <Footer frase = {frase_footer} />
+
     </Fragment>
   );
 }
