@@ -7,7 +7,7 @@ const Changuito = ({changuito, setChanguito}) => {
 
     return (
         <Fragment>
-            <div className="changuito">
+            <div class="changuito">
                 <h3>Changuito de Compras</h3>
                 {
                     changuito.map(

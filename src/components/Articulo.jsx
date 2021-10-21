@@ -16,28 +16,31 @@ const Articulo = ({producto, productos, changuito, setChanguito}) => {
 
     const eliminarProducto = (id) => {
         // me quedo con los productos que no son el q borro
-        console.log(producto.key)
         const pro = []
         //const pro = changuito.filter(producto => producto.id !== id)
-        changuito.forEach( element => { element.id !== id ? pro.push(element) : id = -1 })
+        changuito.forEach( element => { element.id !== id ? pro.push(element) : id = -1 } )
         setChanguito(pro)
     }
 
     return (
         <Fragment>
-            <div>
-                <h3>{id} - {articulo} - {precio}</h3>
+            <div className="list-group-item">
+                
+                <h3 >{id} - {articulo} - {precio}</h3> 
+
                 {
                     productos
                     ?
                         <button 
                             type='button'
+                            class="btn btn-success"
                             onClick={ () => seleccionarProducto(id)}
                         >Comprar
                         </button>
                     :
                         <button
                             type='button'
+                            class="btn btn-danger"
                             onClick={ () => eliminarProducto(id)}
                         >Eliminar
                         </button>

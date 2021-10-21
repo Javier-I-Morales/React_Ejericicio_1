@@ -25,22 +25,26 @@ function App() {
   return (
     <Fragment>
       < Header />
-
-      {productos.map( producto => 
-      (
-        <Articulo 
-          key = {producto.id}
-          producto = {producto}
-          productos = {productos}
-          changuito = {changuito}
-          setChanguito = {setChanguito}
-        />
-      )
+      <div className="container">
+        {productos.map( producto => 
+          (
+            <Articulo 
+              key = {producto.id}
+              producto = {producto}
+              productos = {productos}
+              changuito = {changuito}
+              setChanguito = {setChanguito}
+            />
+          )
         )}
+      </div>
+
       <Changuito 
         changuito = {changuito}
         setChanguito = {setChanguito}
       />
+
+
       <Footer frase = {frase_footer} />
     </Fragment>
   );
